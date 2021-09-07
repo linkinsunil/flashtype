@@ -1,9 +1,12 @@
-import React from 'react'
+import React from 'react';
+import './App.css';
 
 class App extends React.Component {
     render(){
         return(
-            <h1>Hello Flashtype App!</h1>
+            <div className="app">
+                <p>The App</p>
+            </div>
         )
     }
 }
