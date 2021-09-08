@@ -1,5 +1,5 @@
 import React from 'react';
-import 'Landing.css';
+import './Landing.css'
 import flash from './../../Assets/flash.png';
 
 const Landing = () => {
