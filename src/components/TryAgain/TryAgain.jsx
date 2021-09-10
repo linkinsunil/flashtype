@@ -22,6 +22,7 @@ const TryAgain = ({ words, characters, wpm }) => {
 
             <div>
                 <button className="end-buttons start-again-btn">Re-try</button>
+
                 <button
                     onClick={() => {
                         window.open("https://www.facebook.com/sharer/sharer.php?u=linkinsunil.netlify.app",
@@ -30,6 +31,7 @@ const TryAgain = ({ words, characters, wpm }) => {
                         );
                     }}
                     className="end-buttons share-btn">Share</button>
+
                 <button
                 onClick={()=>{
                     window.open(
@@ -39,6 +41,7 @@ const TryAgain = ({ words, characters, wpm }) => {
                     )
                 }}
                 className="end-buttons tweet-btn">Tweet</button>
+                
             </div>
         </div>
     )
