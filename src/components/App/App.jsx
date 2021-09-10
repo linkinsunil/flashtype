@@ -5,13 +5,30 @@ import Landing from '../Landing/Landing';
 import Nav from '../Nav/Nav';
 import './App.css';
 
+const TotalTime = 60;
+
 class App extends React.Component {
+    state = {
+        selectedParagraph: "Linkinsunil",
+        timerStarted: false,
+        timeRemaining: TotalTime,
+        words: 0,
+        characters: 0,
+        wpm: 0,
+    }
     render(){
         return(
             <div className="app">
                 <Nav />
                 <Landing />
-                <ChallengeSection />
+                <ChallengeSection
+                    selectedParagraph={this.state.selectedParagraph}
+                    words={this.state.words}
+                    wpm={this.state.wpm}
+                    timeRemaining={this.state.timeRemaining}
+                    timerStarted={this.state.timerStarted}
+                    characters={this.state.characters}
+                />
                 <Footer />
             </div>
         )
