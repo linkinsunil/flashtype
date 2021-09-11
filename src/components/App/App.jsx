@@ -40,6 +40,10 @@ class App extends React.Component {
         })
     }
 
+    handleUserInput(inputValue){
+        console.log(inputValue)
+    }
+
     render(){
         return(
             <div className="app">
@@ -53,6 +57,7 @@ class App extends React.Component {
                     timerStarted={this.state.timerStarted}
                     characters={this.state.characters}
                     testInfo={this.state.testInfo}
+                    onInputChange={this.handleUserInput}
                 />
                 <Footer />
             </div>
