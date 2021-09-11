@@ -6,6 +6,7 @@ import Nav from '../Nav/Nav';
 import './App.css';
 
 const TotalTime = 60;
+const ServiceURL = 'http://metaphorpsum.com/paragraphs/1/9';
 
 class App extends React.Component {
     state = {
@@ -16,7 +17,17 @@ class App extends React.Component {
         characters: 0,
         wpm: 0,
     }
+
+    componentDidMount () {
+        fetch(ServiceURL)
+        .then(response => response.text())
+        .then(data =>{
+            this.setState({ selectedParagraph: data })
+        })
+    }
+
     render(){
+        console.log("Render method was called")
         return(
             <div className="app">
                 <Nav />
