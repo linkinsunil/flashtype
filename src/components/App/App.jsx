@@ -16,6 +16,7 @@ class App extends React.Component {
         words: 0,
         characters: 0,
         wpm: 0,
+        testInfo: []
     }
 
     componentDidMount () {
@@ -24,10 +25,22 @@ class App extends React.Component {
         .then(data =>{
             this.setState({ selectedParagraph: data })
         })
+
+        const selectedParagraphArray = this.state.selectedParagraph.split("");
+
+        const testInfo = selectedParagraphArray.map((selectedLetter) => {
+            return {
+                testLetter: selectedLetter,
+                status: "notAttempted"
+            }
+        })
+
+        this.setState({
+            testInfo: testInfo
+        })
     }
 
     render(){
-        console.log("Render method was called")
         return(
             <div className="app">
                 <Nav />
@@ -39,6 +52,7 @@ class App extends React.Component {
                     timeRemaining={this.state.timeRemaining}
                     timerStarted={this.state.timerStarted}
                     characters={this.state.characters}
+                    testInfo={this.state.testInfo}
                 />
                 <Footer />
             </div>
