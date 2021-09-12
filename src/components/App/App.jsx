@@ -3,7 +3,7 @@ import ChallengeSection from '../ChallengeSection/ChallengeSection';
 import Footer from '../Footer/Footer';
 import Landing from '../Landing/Landing';
 import Nav from '../Nav/Nav';
-import {SAMPLE_PARAGRAPHS} from './../data/sampleParagraphs'
+import {SAMPLE_PARAGRAPHS} from './../../data/sampleParagraphs'
 import './App.css';
 
 /*
